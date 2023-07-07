@@ -61,7 +61,7 @@ function App() {
           {beshifiedText && <button className="yellow-button" type='button' onClick={() => handleCopy()}>Copy Text</button>}
         </div>
 
-         <p className='footer-text'>Bakit🤸‍♀️ malungkot🤸‍♂️ ang🤸‍♀️ beshy🤸‍♂️ ko🤸‍♀️</p>
+         <p className='footer-text'>Bakit🤸‍♀️ malungkot🤸‍♂️ ang🤸‍♀️ beshi🤸‍♂️ ko🤸‍♀️</p>
       </header>
       <ToastContainer limit={3}/>
     </div>
