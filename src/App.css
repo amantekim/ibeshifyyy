@@ -1,0 +1,126 @@
+.App {
+  text-align: center;
+}
+.women {
+  height: 10vmin;
+  pointer-events: none;
+}
+.men {
+  height: 10vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .women,
+  .men {
+    animation: men-spin 0.5s linear;
+    animation-delay: 0.5s;
+  }
+}
+
+.App-body {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.title {
+  font-weight: bold;
+  color: darkgoldenrod;
+  font-size: 2em;
+  margin: 0px;
+  margin-bottom: 24px;
+}
+.subtitle {
+  font-size: 0.6em;
+  margin-top: 4px;
+}
+.container {
+  display: flex;
+}
+
+
+.textbox {
+  border-radius: 4px;
+  padding: 8px;
+  resize: none;
+  width: 80vw;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 10px
+}
+
+.yellow-button {
+  min-width: 300px;
+  background-color: darkgoldenrod;
+  color: white;
+  font-weight: bold;
+  padding: 0.8em 5em;
+  border: none;
+  border-radius: 0.25em;
+  cursor: pointer;
+  font-size: 0.7em;
+}
+
+.yellow-button:hover {
+  background-color: rgb(188, 162, 95)
+}
+
+.clear-button {
+  min-width: 300px;
+  font-weight: bold;
+  padding: 0.8em 5em;
+  border: none;
+  border-radius: 0.25em;
+  cursor: pointer;
+  font-size: 0.7em;
+}
+.clear-button:hover {
+  background-color: rgb(238, 231, 211)
+}
+.footer-text{
+  margin-top: 32px;
+}
+@keyframes men-spin {
+  from {
+    transform: rotate(-180deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .textbox {
+    width: 80vw;
+  }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  .textbox {
+    width: 40vw;
+  }
+}
+
+/*Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .textbox {
+    width: 30vw;
+  }
+}
