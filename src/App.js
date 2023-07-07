@@ -15,7 +15,7 @@ function App() {
     let newString = ""
     if(textValue) {
       let delimiter = delimeters[Math.floor(Math.random()*delimeters.length)];
-      newString = beshified.join(delimiter)
+      newString = beshified.join(delimiter) + delimiter
       setBeshifiedText(newString)
       notify("Beshified!")
     } else {
@@ -26,10 +26,12 @@ function App() {
   const handleClear = (e) => {
     e.preventDefault()
     setBeshifiedText("")
+    setTextValue("")
   }
 
   const handleCopy = useCallback(() => {
     navigator.clipboard.writeText(beshifiedText);
+    notify("Beshified text copied! 💅💅💅")
   },[beshifiedText])
 
   const notify = (text) => toast(text);
@@ -57,7 +59,7 @@ function App() {
           />
 
           <button className="yellow-button" type='button' onClick={() => handleBeshify()}>Beshify</button>
-          <button className="clear-button" type='button' onClick={() => handleClear()}>Clear</button>
+          <button className="clear-button" type='button' onClick={(e) => handleClear(e)}>Clear</button>
           {beshifiedText && <button className="yellow-button" type='button' onClick={() => handleCopy()}>Copy Text</button>}
         </div>
 
